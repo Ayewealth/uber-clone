@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 import { router } from "expo-router";
 import { useFetch } from "@/lib/fetch";
 import { useAuth } from "@clerk/clerk-react";
+import { StatusBar } from "expo-status-bar";
 
 export default function Page() {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
@@ -74,6 +75,7 @@ export default function Page() {
 
   return (
     <SafeAreaView className="bg-general-500">
+      <StatusBar style="dark" />
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
@@ -107,7 +109,7 @@ export default function Page() {
           ListHeaderComponent={() => (
             <>
               <View className="flex flex-row items-center justify-between my-5">
-                <Text className="text-2xl capitalize font-JakartaBold">
+                <Text className="text-xl capitalize font-JakartaBold">
                   Welcome{", "}
                   {user?.firstName ||
                     user?.emailAddresses[0].emailAddress.split("@")[0]}{" "}

@@ -6,6 +6,7 @@ import { Ride } from "@/types/type";
 import { SafeAreaView } from "react-native-safe-area-context";
 import RideCard from "@/components/RideCard";
 import { images } from "@/constants";
+import { StatusBar } from "expo-status-bar";
 
 const Rides = () => {
   const { user } = useUser();
@@ -15,6 +16,7 @@ const Rides = () => {
   );
   return (
     <SafeAreaView className="flex-1 bg-white">
+      <StatusBar style="dark" />
       <FlatList
         data={recentRides}
         renderItem={({ item }) => <RideCard ride={item} />}

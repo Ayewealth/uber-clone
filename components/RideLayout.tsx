@@ -44,7 +44,7 @@ const RideLayout = ({
 
         <BottomSheet
           ref={bottomSheetRef}
-          snapPoints={snapPoints || ["45%", "85%"]}
+          snapPoints={snapPoints || ["45%", "85%", "100%"]}
           index={0}
           keyboardBehavior="extend"
         >

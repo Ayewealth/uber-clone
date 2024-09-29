@@ -49,11 +49,11 @@ const RideCard = ({
         <View className="flex flex-col w-full mt-5 bg-general-500 rounded-lg p-3 items-start justify-center">
           <View className="flex flex-row items-center w-full justify-between mb-5">
             <Text className="text-md font-JakartaMedium text-gray-500">
-              Date & Time
+              Time
             </Text>
 
             <Text className="text-md font-JakartaMedium text-gray-500">
-              {formatDate(created_at)}, {formatTime(ride_time)}
+              {formatTime(ride_time)}
             </Text>
           </View>
 
